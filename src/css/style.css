@@ -1,0 +1,28 @@
+:root {
+  --prime: #000;
+  --second: #fff;
+}
+
+::selection {
+  color: var(--second);
+  background: var(--prime);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font-size: 20px;
+  color: var(--prime);
+  background-color: var(--second);
+  font-family: sans-serif;
+}
