@@ -6,7 +6,7 @@ async function getLocationData(location) {
   const key = "QFH2HFATTUUJLRFDKPWZUE8GQ";
   const day = getTodayFormatted();
 
-  const query = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${location}/${day}/?key=${key}`;
+  const query = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${location}/?key=${key}`;
 
   let json = false;
 
