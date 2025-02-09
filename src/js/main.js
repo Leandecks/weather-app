@@ -19,5 +19,12 @@ async function request(place) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  main();
-})
+  const inputField = document.querySelector("#location");
+  const submitButton = document.querySelector("#submit");
+
+  submitButton.addEventListener("click", (e) => {
+    e.preventDefault();
+    console.log(inputField, inputField.value);
+    request(inputField.value);
+  });
+});
