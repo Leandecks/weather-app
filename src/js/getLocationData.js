@@ -8,8 +8,14 @@ async function getLocationData(location) {
 
   const query = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${location}/${day}/?key=${key}`;
 
-  const data = await fetch(query, { mode: "cors" });
-  const json = await data.json();
+  let json = false;
+
+  try {
+    const data = await fetch(query, { mode: "cors" });
+    json = await data.json();
+  } catch (error) {
+    console.error("This error got caught!", error);
+  }
 
   return json;
 }
