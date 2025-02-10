@@ -11,12 +11,28 @@
     <link rel="shortcut icon" href="img/letter-l.png" type="image/x-icon" />
   </head>
   <body>
-    <form action="">
-      <label for="location">
-        Input location:
-        <input type="text" id="location" name="location" />
-      </label>
-      <button type="submit" id="submit">Search</button>
-    </form>
+    <h1>Leandecks Weather <i class="nf nf-md-weather_pouring"></i></h1>
+    <main>
+      <form>
+        <label for="location">
+          <input
+            type="text"
+            id="location"
+            name="location"
+            placeholder="Search for a location"
+          />
+        </label>
+        <button type="submit" id="submit">Search</button>
+      </form>
+
+      <div id="weather">
+        <h2 id="city"></h2>
+        <p id="fullplace"></p>
+        <p id="coords"></p>
+        <p id="description"></p>
+        <h3>Alerts</h3>
+        <p id="alerts"></p>
+      </div>
+    </main>
   </body>
 </html>
