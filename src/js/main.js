@@ -3,6 +3,16 @@ import "../css/style.css";
 import getLocationData from "./getLocationData";
 import processLocationData from "./processLocationData";
 
+document.addEventListener("DOMContentLoaded", () => {
+  const inputField = document.querySelector("#location");
+  const submitButton = document.querySelector("#submit");
+
+  submitButton.addEventListener("click", (e) => {
+    e.preventDefault();
+    request(inputField.value);
+  });
+});
+
 async function request(place) {
   const json = await getLocationData(place);
 
