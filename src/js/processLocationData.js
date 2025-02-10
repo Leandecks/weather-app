@@ -7,7 +7,6 @@ function processLocationData(json) {
     place: json.address,
     fullPlace: json.resolvedAddress,
     description: json.description,
-    timezone: json.timezone,
     alerts: json.alerts.map((alert) => ({
       event: alert.headline,
       description: alert.description,
