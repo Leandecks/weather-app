@@ -1,11 +1,22 @@
+@import "https://www.nerdfonts.com/assets/css/webfont.css";
+@import url("https://fonts.googleapis.com/css2?family=Cherry+Cream+Soda&family=Lexend+Deca:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Rock+Salt&display=swap");
+
+/*
+Lexend Deca
+Rock Salt
+Noto Sans
+(Cherry Cream Soda)
+*/
+
 :root {
   --prime: #000;
-  --second: #fff;
+  --second: #fefae0;
+  --accent: #415a77;
 }
 
 ::selection {
-  color: var(--second);
-  background: var(--prime);
+  color: var(--prime);
+  background: var(--second);
 }
 
 * {
@@ -21,8 +32,64 @@ body {
 }
 
 body {
-  font-size: 20px;
+  font-size: 16px;
   color: var(--prime);
   background-color: var(--second);
-  font-family: sans-serif;
+  font-family: "Noto Sans", sans-serif;
+}
+
+/*main styling*/
+
+h1 {
+  display: inline-block;
+  background-color: var(--accent);
+  color: var(--second);
+  padding: 2rem;
+  width: 100%;
+  text-align: center;
+  font-family: "Lexend Deca", sans-serif;
+}
+
+main {
+  margin: 2rem;
+}
+
+form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+form input {
+  border: none;
+  outline: none;
+  background-color: var(--accent);
+  color: var(--second);
+  font-size: 1.2rem;
+  border-radius: 3rem;
+  padding: 0.5rem 1.4rem;
+  height: 3rem;
+  width: 20rem;
+}
+
+form button {
+  border: none;
+  font-size: 1.2rem;
+  padding: 0.5rem 1.4rem;
+  background-color: var(--accent);
+  color: var(--second);
+  border-radius: 3rem;
+  height: 3rem;
+  width: 7rem;
+  text-align: center;
+}
+
+form button:hover {
+  text-decoration: underline;
+}
+
+#weather {
+  margin-top: 1rem;
 }
