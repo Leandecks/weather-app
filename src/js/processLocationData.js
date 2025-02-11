@@ -1,4 +1,3 @@
-import formatIsoTime from "./time/formatIsoTime";
 import removeSeconds from "./time/removeSeconds";
 import toCelsius from "./fahrenheitCelsius";
 import msToKmh from "./msToKmh";
