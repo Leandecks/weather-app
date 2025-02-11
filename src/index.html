@@ -7,7 +7,7 @@
       content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
     />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Project</title>
+    <title>Leandecks Weather</title>
     <link rel="shortcut icon" href="img/letter-l.png" type="image/x-icon" />
   </head>
   <body>
@@ -26,12 +26,137 @@
       </form>
 
       <div id="weather">
-        <h2 id="city"></h2>
+        <h2 class="city-temp">
+          <span id="city"></span>, <span class="temperature"></span>°C
+        </h2>
         <p id="fullplace"></p>
         <p id="coords"></p>
         <p id="description"></p>
         <h3>Alerts</h3>
-        <p id="alerts"></p>
+        <div id="alerts"></div>
+        <h3>Current conditions at <span id="time"></span></h3>
+        <div class="table-wrapper">
+          <table>
+            <tr>
+              <th>Conditions</th>
+              <td><p id="conditions"></p></td>
+            </tr>
+            <tr>
+              <th>Temperature</th>
+              <td>
+                <p class="temperature"></p>
+                °C
+              </td>
+            </tr>
+            <tr>
+              <th>Feels like temperature</th>
+              <td>
+                <p id="feels-like"></p>
+                °C
+              </td>
+            </tr>
+            <tr>
+              <th>Dew</th>
+              <td>
+                <p id="dew"></p>
+                °C
+              </td>
+            </tr>
+            <tr>
+              <th>Humidity</th>
+              <td>
+                <p id="humidity"></p>
+                %
+              </td>
+            </tr>
+            <tr>
+              <th>Rainfall</th>
+              <td>
+                <p id="rain-fall"></p>
+                mm
+              </td>
+            </tr>
+            <tr>
+              <th>Probability of rainfall</th>
+              <td>
+                <p id="rain-probability"></p>
+                %
+              </td>
+            </tr>
+            <tr>
+              <th>Type of rain</th>
+              <td><p id="rain-type"></p></td>
+            </tr>
+            <tr>
+              <th>Pressure</th>
+              <td>
+                <p id="pressure"></p>
+                mb (hPa)
+              </td>
+            </tr>
+            <tr>
+              <th>Snowfall</th>
+              <td>
+                <p id="snow-fall"></p>
+                mm
+              </td>
+            </tr>
+            <tr>
+              <th>Depth of snow</th>
+              <td>
+                <p id="snow-depth"></p>
+                cm
+              </td>
+            </tr>
+            <tr>
+              <th>Sunrise</th>
+              <td><p id="sunrise"></p></td>
+            </tr>
+            <tr>
+              <th>Sunset</th>
+              <td><p id="sunset"></p></td>
+            </tr>
+            <tr>
+              <th>Wind direction</th>
+              <td>
+                <p id="wind-direction"></p>
+                °
+              </td>
+            </tr>
+            <tr>
+              <th>Wind speed</th>
+              <td>
+                <p id="wind-speed"></p>
+                m/s -
+                <span id="wind-speed-kmh"></span>
+                km/h
+              </td>
+            </tr>
+            <tr>
+              <th>Current wind speed</th>
+              <td>
+                <p id="wind-current-speed"></p>
+                m/s -
+                <span id="wind-current-speed-kmh"></span>
+                km/h
+              </td>
+            </tr>
+            <tr>
+              <th>Solar energy</th>
+              <td>
+                <p id="solar-energy"></p>
+                W/m²
+              </td>
+            </tr>
+            <tr>
+              <th>Visibility</th>
+              <td>
+                <p id="visibility"></p>
+                m
+              </td>
+            </tr>
+          </table>
+        </div>
       </div>
     </main>
   </body>

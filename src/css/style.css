@@ -12,11 +12,12 @@ Noto Sans
   --prime: #000;
   --second: #fefae0;
   --accent: #415a77;
+  --alert: #fca311;
 }
 
 ::selection {
-  color: var(--prime);
-  background: var(--second);
+  color: var(--prime); /* TODO: better colors */
+  background: var(--alert);
 }
 
 * {
@@ -92,4 +93,63 @@ form button:hover {
 
 #weather {
   margin-top: 1rem;
+}
+
+.city-temp {
+  text-align: center;
+  font-size: 3rem;
+  font-family: "Lexend Deca", sans-serif;
+}
+
+#fullplace,
+#coords {
+  text-align: center;
+  margin: 1rem;
+}
+
+#fullplace {
+  font-style: italic;
+}
+
+h3 {
+  font-size: 2rem;
+  margin: 1rem 1rem 1rem 0;
+  font-family: "Lexend Deca", sans-serif;
+}
+
+#alerts > * {
+  background-color: var(--alert);
+  padding: 1rem;
+}
+
+.table-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+table {
+  width: 50%;
+}
+
+table td,
+table th {
+  padding: 0.5rem;
+  border: solid 0.2rem var(--accent);
+}
+
+table th {
+  background-color: var(--accent);
+  color: var(--second);
+  width: 25%;
+}
+
+table td {
+  text-align: center;
+  width: 25%;
+}
+
+table td > p {
+  display: inline-block;
 }
