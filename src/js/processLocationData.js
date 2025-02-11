@@ -1,6 +1,9 @@
 import formatIsoTime from "./time/formatIsoTime";
 import removeSeconds from "./time/removeSeconds";
 import toCelsius from "./fahrenheitCelsius";
+import msToKmh from "./msToKmh";
+import nullToNumber from "./nullSafety/nullToNumber";
+import nullToString from "./nullSafety/nullToString";
 
 function processLocationData(json) {
   return {
@@ -9,8 +12,6 @@ function processLocationData(json) {
     description: json.description,
     alerts: json.alerts.map((alert) => ({
       event: alert.headline,
-      description: alert.description,
-      end: formatIsoTime(alert.ends),
     })),
     coordinates: {
       latitude: json.latitude,
@@ -21,25 +22,26 @@ function processLocationData(json) {
       time: removeSeconds(json.currentConditions.datetime),
       temperature: toCelsius(json.currentConditions.temp), // °F
       feelsLike: toCelsius(json.currentConditions.feelslike), // °F
-      icon: json.currentConditions.icon,
       dew: toCelsius(json.currentConditions.dew), // Taupunkt °F
       humidity: json.currentConditions.humidity, // in %
       precipitation: {
         fall: json.currentConditions.precip, // Niederschlag
         probability: json.currentConditions.precipprob, // % Niederschlag
-        type: json.currentConditions.preciptype,
+        type: nullToString(json.currentConditions.preciptype),
       },
       pressure: json.currentConditions.pressure, // mb, hPa
       snow: {
         fall: json.currentConditions.snow,
         depth: json.currentConditions.snowdepth,
       },
-      sunrise: json.currentConditions.sunrise,
-      sunset: json.currentConditions.sunset,
+      sunrise: removeSeconds(json.currentConditions.sunrise),
+      sunset: removeSeconds(json.currentConditions.sunset),
       wind: {
         direction: json.currentConditions.winddir,
         speed: json.currentConditions.windspeed,
-        currentSpeed: json.currentConditions.windgust,
+        speedKmh: msToKmh(json.currentConditions.windspeed),
+        currentSpeed: nullToNumber(json.currentConditions.windgust),
+        currentSpeedKmh: msToKmh(json.currentConditions.windgust),
       },
       solarEnergy: json.currentConditions.solarenergy,
       visibility: json.currentConditions.visibility,
