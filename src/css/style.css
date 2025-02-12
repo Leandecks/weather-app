@@ -16,7 +16,7 @@ Noto Sans
 }
 
 ::selection {
-  color: var(--prime); /* TODO: better colors */
+  color: var(--prime);
   background: var(--alert);
 }
 
@@ -92,7 +92,7 @@ form button:hover {
 }
 
 #weather {
-  margin-top: 1rem;
+  margin: 1rem;
 }
 
 .city-temp {
@@ -133,6 +133,10 @@ table {
   width: 50%;
 }
 
+.table-wrapper {
+  margin: 1rem;
+}
+
 table td,
 table th {
   padding: 0.5rem;
@@ -153,4 +157,3 @@ table td {
 table td > p {
   display: inline-block;
 }
-
