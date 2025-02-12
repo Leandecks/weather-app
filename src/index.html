@@ -27,16 +27,18 @@
 
       <div id="weather">
         <h2 class="city-temp">
+          <i id="city-icon" class="nf"></i>
           <span id="city"></span>, <span class="temperature"></span>°C
         </h2>
         <p id="fullplace"></p>
         <p id="coords"></p>
         <p id="description"></p>
+
         <h3>Alerts</h3>
         <div id="alerts"></div>
+
         <h3>Current conditions at <span id="time"></span></h3>
         <div class="table-wrapper">
-          <!--TODO: Explain wind direction-->
           <table>
             <tr>
               <th>Conditions</th>
@@ -158,11 +160,12 @@
             </tr>
           </table>
         </div>
-
         <p>
           * The wind direction is given in angles. 0° is north, 90° is east and
           so on.
         </p>
+
+        <h3>Future conditions (next 3 days)</h3>
       </div>
     </main>
   </body>
