@@ -8,9 +8,17 @@ document.addEventListener("DOMContentLoaded", () => {
   const inputField = document.querySelector("#location");
   const submitButton = document.querySelector("#submit");
 
+  let isRequest = false;
+
+  if (!isRequest) {
+    request("London");
+    isRequest = true;
+  }
+
   submitButton.addEventListener("click", (e) => {
     e.preventDefault();
     request(inputField.value);
+    isRequest = true;
   });
 });
 
