@@ -29,11 +29,17 @@ function displayData(data) {
   const visibility = container.querySelector("#visibility");
 
   const time = document.querySelector("#time");
+  const cityIcon = document.querySelector("#city-icon");
 
   city.textContent = data.place;
+  cityIcon.className = "";
+  cityIcon.classList.add("nf");
+  cityIcon.classList.add(data.future[0].icon);
   fullplace.textContent = data.fullPlace;
   coords.textContent = `${data.coordinates.latitude}, ${data.coordinates.longitude}`;
   description.textContent = data.description;
+
+  alerts.textContent = "";
 
   if (data.alerts.length === 0) {
     const alert = document.createElement("p");
@@ -50,7 +56,6 @@ function displayData(data) {
   conditions.textContent = data.current.conditions;
 
   [...temperature].forEach((temp) => {
-    console.log(temp);
     temp.textContent = data.current.temperature;
   });
 
