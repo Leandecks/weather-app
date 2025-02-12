@@ -1,5 +1,6 @@
 function msToKmh(ms) {
-  return ms * 3.6;
+  const kmh = ms * 3.6;
+  return Math.round(kmh * 100) / 100;
 }
 
 export default msToKmh;
