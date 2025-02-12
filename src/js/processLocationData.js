@@ -53,7 +53,6 @@ function processLocationData(json) {
         temperature: toCelsius(json.days[0].temp),
         minTemperature: toCelsius(json.days[0].tempmin),
         maxTemperature: toCelsius(json.days[0].tempmax),
-        feelsLike: toCelsius(json.days[0].feelslike),
         rainChance: json.days[0].precipprob,
       },
       {
@@ -62,7 +61,6 @@ function processLocationData(json) {
         temperature: toCelsius(json.days[1].temp),
         minTemperature: toCelsius(json.days[1].tempmin),
         maxTemperature: toCelsius(json.days[1].tempmax),
-        feelsLike: toCelsius(json.days[1].feelslike),
         rainChance: json.days[1].precipprob,
       },
       {
@@ -71,7 +69,6 @@ function processLocationData(json) {
         temperature: toCelsius(json.days[2].temp),
         minTemperature: toCelsius(json.days[2].tempmin),
         maxTemperature: toCelsius(json.days[2].tempmax),
-        feelsLike: toCelsius(json.days[2].feelslike),
         rainChance: json.days[2].precipprob,
       },
       {
@@ -80,7 +77,6 @@ function processLocationData(json) {
         temperature: toCelsius(json.days[3].temp),
         minTemperature: toCelsius(json.days[3].tempmin),
         maxTemperature: toCelsius(json.days[3].tempmax),
-        feelsLike: toCelsius(json.days[3].feelslike),
         rainChance: json.days[3].precipprob,
       },
     ],
