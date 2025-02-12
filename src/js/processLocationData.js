@@ -3,6 +3,7 @@ import toCelsius from "./fahrenheitCelsius";
 import msToKmh from "./msToKmh";
 import nullToNumber from "./nullSafety/nullToNumber";
 import nullToString from "./nullSafety/nullToString";
+import conditionsToIcon from "./conditionsToIcon";
 
 function processLocationData(json) {
   return {
@@ -48,38 +49,38 @@ function processLocationData(json) {
     future: [
       {
         conditions: json.days[0].conditions,
+        icon: conditionsToIcon(json.days[0].conditions),
         temperature: toCelsius(json.days[0].temp),
         minTemperature: toCelsius(json.days[0].tempmin),
         maxTemperature: toCelsius(json.days[0].tempmax),
         feelsLike: toCelsius(json.days[0].feelslike),
-        icon: json.days[0].icon,
         rainChance: json.days[0].precipprob,
       },
       {
         conditions: json.days[1].conditions,
+        icon: conditionsToIcon(json.days[1].conditions),
         temperature: toCelsius(json.days[1].temp),
         minTemperature: toCelsius(json.days[1].tempmin),
         maxTemperature: toCelsius(json.days[1].tempmax),
         feelsLike: toCelsius(json.days[1].feelslike),
-        icon: json.days[1].icon,
         rainChance: json.days[1].precipprob,
       },
       {
         conditions: json.days[2].conditions,
+        icon: conditionsToIcon(json.days[2].conditions),
         temperature: toCelsius(json.days[2].temp),
         minTemperature: toCelsius(json.days[2].tempmin),
         maxTemperature: toCelsius(json.days[2].tempmax),
         feelsLike: toCelsius(json.days[2].feelslike),
-        icon: json.days[2].icon,
         rainChance: json.days[2].precipprob,
       },
       {
         conditions: json.days[3].conditions,
+        icon: conditionsToIcon(json.days[3].conditions),
         temperature: toCelsius(json.days[3].temp),
         minTemperature: toCelsius(json.days[3].tempmin),
         maxTemperature: toCelsius(json.days[3].tempmax),
         feelsLike: toCelsius(json.days[3].feelslike),
-        icon: json.days[3].icon,
         rainChance: json.days[3].precipprob,
       },
     ],
