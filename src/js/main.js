@@ -2,7 +2,7 @@ import "../index.html";
 import "../css/style.css";
 import getLocationData from "./getLocationData";
 import processLocationData from "./processLocationData";
-import displayData from "./displayData";
+import displayData from "./display/displayData";
 
 document.addEventListener("DOMContentLoaded", () => {
   const inputField = document.querySelector("#location");
