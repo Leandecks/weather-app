@@ -19,6 +19,7 @@ function processLocationData(json) {
     },
     current: {
       conditions: json.currentConditions.conditions,
+      icon: conditionsToIcon(json.currentConditions.conditions),
       time: removeSeconds(json.currentConditions.datetime),
       temperature: toCelsius(json.currentConditions.temp), // °F
       feelsLike: toCelsius(json.currentConditions.feelslike), // °F
