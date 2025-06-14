@@ -1,11 +1,5 @@
-function displayData(data) {
+function displayCurrent(data) {
   const container = document.querySelector("#weather");
-  const city = container.querySelector("#city");
-  const fullplace = container.querySelector("#fullplace");
-  const coords = container.querySelector("#coords");
-  const description = container.querySelector("#description");
-  const alerts = container.querySelector("#alerts");
-  const conditions = container.querySelector("#conditions");
   const temperature = container.querySelectorAll(".temperature");
   const feelsLike = container.querySelector("#feels-like");
   const dew = container.querySelector("#dew");
@@ -27,33 +21,7 @@ function displayData(data) {
   );
   const solarEnergy = container.querySelector("#solar-energy");
   const visibility = container.querySelector("#visibility");
-
   const time = document.querySelector("#time");
-  const cityIcon = document.querySelector("#city-icon");
-
-  city.textContent = data.place;
-  cityIcon.className = "";
-  cityIcon.classList.add("nf");
-  cityIcon.classList.add(data.future[0].icon);
-  fullplace.textContent = data.fullPlace;
-  coords.textContent = `${data.coordinates.latitude}, ${data.coordinates.longitude}`;
-  description.textContent = data.description;
-
-  alerts.textContent = "";
-
-  if (data.alerts.length === 0) {
-    const alert = document.createElement("p");
-    alert.textContent = "There are no alerts.";
-    alerts.appendChild(alert);
-  } else {
-    for (let i = 0; i < data.alerts.length; i++) {
-      const alert = document.createElement("p");
-      alert.textContent = data.alerts[i].event;
-      alerts.appendChild(alert);
-    }
-  }
-
-  conditions.textContent = data.current.conditions;
 
   [...temperature].forEach((temp) => {
     temp.textContent = data.current.temperature;
@@ -81,4 +49,4 @@ function displayData(data) {
   time.textContent = data.current.time;
 }
 
-export default displayData;
+export default displayCurrent;

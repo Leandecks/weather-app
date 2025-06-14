@@ -1,6 +1,6 @@
 import removeSeconds from "./time/removeSeconds";
-import toCelsius from "./fahrenheitCelsius";
-import msToKmh from "./msToKmh";
+import toCelsius from "./conversion/fahrenheitCelsius";
+import msToKmh from "./conversion/msToKmh";
 import nullToNumber from "./nullSafety/nullToNumber";
 import nullToString from "./nullSafety/nullToString";
 import conditionsToIcon from "./conditionsToIcon";
@@ -19,6 +19,7 @@ function processLocationData(json) {
     },
     current: {
       conditions: json.currentConditions.conditions,
+      icon: conditionsToIcon(json.currentConditions.conditions),
       time: removeSeconds(json.currentConditions.datetime),
       temperature: toCelsius(json.currentConditions.temp), // °F
       feelsLike: toCelsius(json.currentConditions.feelslike), // °F
