@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let isRequest = false;
 
   if (!isRequest) {
-    request("London");
+    request("Berlin");
     isRequest = true;
   }
 
