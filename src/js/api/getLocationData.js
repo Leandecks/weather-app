@@ -1,11 +1,7 @@
-import getTodayFormatted from "../time/getTodayFormatted";
-
 async function getLocationData(location) {
   // https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/Cesena/2025-1-12?key=QFH2HFATTUUJLRFDKPWZUE8GQ
 
   const key = "QFH2HFATTUUJLRFDKPWZUE8GQ";
-  const day = getTodayFormatted();
-
   const query = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${location}/?key=${key}`;
 
   let json = false;
