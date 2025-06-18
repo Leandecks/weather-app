@@ -3,7 +3,7 @@ import toCelsius from "../conversion/fahrenheitCelsius";
 import msToKmh from "../conversion/msToKmh";
 import nullToNumber from "../nullSafety/nullToNumber";
 import nullToString from "../nullSafety/nullToString";
-import conditionsToIcon from "../conditionsToIcon";
+import conditionsToIcon from "../stringManipulation/conditionsToIcon";
 
 function processLocationData(json) {
   return {
