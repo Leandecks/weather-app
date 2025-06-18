@@ -113,14 +113,33 @@ form button:hover {
 
 h3 {
   font-size: 2rem;
-  margin: 1rem 1rem 1rem 0;
+  margin: 3rem 0;
   font-family: "Lexend Deca", sans-serif;
 }
+
+/*next days*/
+
+#next-days {
+  display: flex;
+  justify-content: space-around;
+}
+
+#next-days > * {
+  text-align: center;
+}
+
+#next-days i {
+  font-size: 5rem;
+}
+
+/*alerts*/
 
 #alerts > * {
   background-color: var(--alert);
   padding: 1rem;
 }
+
+/*current conditions*/
 
 .table-wrapper {
   width: 100%;
