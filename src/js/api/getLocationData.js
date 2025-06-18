@@ -1,4 +1,4 @@
-import getTodayFormatted from "./time/getTodayFormatted";
+import getTodayFormatted from "../time/getTodayFormatted";
 
 async function getLocationData(location) {
   // https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/Cesena/2025-1-12?key=QFH2HFATTUUJLRFDKPWZUE8GQ

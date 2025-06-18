@@ -1,7 +1,7 @@
 import "../index.html";
 import "../css/style.css";
-import getLocationData from "./getLocationData";
-import processLocationData from "./processLocationData";
+import getLocationData from "./api/getLocationData";
+import processLocationData from "./api/processLocationData";
 import displayData from "./display/displayData";
 
 document.addEventListener("DOMContentLoaded", () => {
