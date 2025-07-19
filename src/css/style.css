@@ -12,6 +12,7 @@ Noto Sans
   --prime: #000;
   --second: #fefae0;
   --accent: #415a77;
+  --rain: #2172cd;
   --alert: #fca311;
 }
 
@@ -33,7 +34,7 @@ body {
 }
 
 body {
-  font-size: 16px;
+  font-size: 18px;
   color: var(--prime);
   background-color: var(--second);
   font-family: "Noto Sans", sans-serif;
