@@ -16,10 +16,13 @@ function displayFuture(data) {
     icons[i].classList.add(data.future[i].icon);
 
     conditions[i].textContent = data.future[i].conditions;
-    temperature[i].textContent = data.future[i].temperature;
+    temperature[i].textContent = data.future[i].temperature + " °C";
     minmax[i].textContent =
-      data.future[i].minTemperature + " ~ " + data.future[i].maxTemperature;
-    precipitation[i].textContent = data.future[i].rainChance + " %";
+      data.future[i].minTemperature +
+      " °C ~ " +
+      data.future[i].maxTemperature +
+      " °C";
+    precipitation[i].textContent = data.future[i].rainChance + " % rain chance";
   }
 
   day2Name.textContent = getWeekday(2);
