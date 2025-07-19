@@ -148,7 +148,7 @@ h3 {
   align-items: center;
 }
 
-table {
+table#current-table {
   width: 50%;
 }
 
@@ -156,23 +156,23 @@ table {
   margin: 1rem;
 }
 
-table td,
-table th {
+table#current-table td,
+table#current-table th {
   padding: 0.5rem;
   border: solid 0.2rem var(--accent);
 }
 
-table th {
+table#current-table th {
   background-color: var(--accent);
   color: var(--second);
   width: 25%;
 }
 
-table td {
+table#current-table td {
   text-align: center;
   width: 25%;
 }
 
-table td > p {
+table#current-table td > p {
   display: inline-block;
 }
