@@ -12,7 +12,8 @@ Noto Sans
   --prime: #000;
   --second: #fefae0;
   --accent: #415a77;
-  --rain: #2172cd;
+  --cold: #11dfff;
+  --warm: #ea5454;
   --alert: #fca311;
 }
 
@@ -118,8 +119,15 @@ h3 {
   font-family: "Lexend Deca", sans-serif;
 }
 
-/*next days*/
+/*alerts*/
 
+#alerts > * {
+  background-color: var(--alert);
+  padding: 1rem;
+  margin: 1rem;
+}
+
+/*future conditions*/
 #next-days {
   display: flex;
   justify-content: space-around;
@@ -133,11 +141,34 @@ h3 {
   font-size: 5rem;
 }
 
-/*alerts*/
+.day {
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  background-color: var(--accent);
+  color: var(--second);
+  padding: 2rem;
+  border-radius: 2rem;
+}
 
-#alerts > * {
-  background-color: var(--alert);
-  padding: 1rem;
+.day p,
+.day div {
+  background-color: var(--second);
+  color: var(--accent);
+  padding: 0.8rem;
+  width: 15rem;
+  border-radius: 2rem;
+}
+
+.day .min-temp {
+  color: var(--cold);
+}
+
+.day .max-temp {
+  color: var(--warm);
 }
 
 /*current conditions*/
