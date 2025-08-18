@@ -54,7 +54,7 @@ h1 {
 }
 
 main {
-  margin: 2rem;
+  padding: 2rem;
 }
 
 form {
@@ -129,6 +129,7 @@ h3 {
 }
 
 /*future conditions*/
+
 #next-days {
   display: flex;
   justify-content: space-around;
@@ -189,23 +190,34 @@ table#current-table {
   margin: 1rem;
 }
 
+table#current-table {
+  border-collapse: separate;
+  border-spacing: 0 0.5rem;
+}
+
 table#current-table td,
 table#current-table th {
-  padding: 0.5rem;
+  padding: 0.8rem;
   border: solid 0.2rem var(--accent);
 }
 
 table#current-table th {
   background-color: var(--accent);
   color: var(--second);
+  border-radius: 2rem 0 0 2rem;
   width: 25%;
 }
 
 table#current-table td {
   text-align: center;
+  border-radius: 0 2rem 2rem 0;
   width: 25%;
 }
 
 table#current-table td > p {
   display: inline-block;
+}
+
+p#wind-info {
+  margin: 2rem;
 }
