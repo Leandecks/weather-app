@@ -121,11 +121,19 @@ h3 {
 
 /*alerts*/
 
+#alerts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
 #alerts > * {
   background-color: var(--alert);
   padding: 1rem 2rem;
-  margin: 1rem;
   border-radius: 2rem;
+  width: 75%;
 }
 
 /*future conditions*/
@@ -176,18 +184,13 @@ h3 {
 /*current conditions*/
 
 .table-wrapper {
-  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 table#current-table {
-  width: 50%;
-}
-
-.table-wrapper {
-  margin: 1rem;
+  width: 75%;
 }
 
 table#current-table {
