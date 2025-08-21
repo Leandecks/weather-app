@@ -224,3 +224,26 @@ table#current-table td > p {
 p#wind-info {
   margin: 2rem;
 }
+
+/*footer*/
+
+footer {
+  background-color: var(--alert);
+  text-align: center;
+  padding: 2rem;
+}
+
+footer a {
+  text-decoration: underline;
+  color: var(--prime);
+  padding: 0.2rem 0.4rem;
+  border-radius: 2rem;
+  background-color: var(--second);
+  transition: all 250ms ease;
+}
+
+footer a:hover {
+  text-decoration: none;
+  background-color: var(--accent);
+  color: var(--second);
+}
