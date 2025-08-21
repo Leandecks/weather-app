@@ -19,6 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
     e.preventDefault();
     request(inputField.value);
     isRequest = true;
+    inputField.value = "";
   });
 });
 
