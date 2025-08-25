@@ -10,12 +10,8 @@ Favicon (L) by [arnikahossain - Flaticon](https://www.flaticon.com/free-icons/le
 ### Features
 
 - Weather now
-- Forecast for 2 weeks
-
-Including:
-- Temperature
-- Rain, Snow...
-- Sunrise and set
+- Forecast for 3 days
+- Detailed current weather conditions
 
 ### Tools used
 
@@ -23,3 +19,4 @@ Including:
 - [ESLint](https://eslint.org/)
 - [Prettier](https://prettier.io/)
 - [Babel](https://babeljs.io/)
+- [Visual Crossing Weather API](https://www.visualcrossing.com/)
