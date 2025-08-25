@@ -141,6 +141,9 @@ h3 {
 #next-days {
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
+  column-gap: 2rem;
+  row-gap: 2rem;
 }
 
 #next-days > * {
@@ -246,4 +249,63 @@ footer a:hover {
   text-decoration: none;
   background-color: var(--accent);
   color: var(--second);
+}
+
+/*wide screens*/
+
+@media screen and (min-width: 1800px) {
+  #next-days {
+    justify-content: space-evenly;
+  }
+}
+
+/*medium screens*/
+
+@media screen and (max-width: 1450px) {
+  #next-days {
+    justify-content: space-evenly;
+  }
+}
+
+/*small screens*/
+
+@media screen and (max-width: 512px) {
+  form {
+    flex-direction: column;
+  }
+
+  form input {
+    text-align: center;
+  }
+
+  form button#submit {
+    width: 20rem;
+  }
+
+  #weather {
+    margin: 0;
+  }
+
+  h2.city-temp {
+    margin-top: 1rem;
+    font-size: 2.3rem;
+  }
+
+  h3 {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  table#current-table {
+    width: 100%;
+  }
+
+  table#current-table th {
+    width: 50%;
+  }
+
+  table#current-table td {
+    width: 50%;
+  }
 }
