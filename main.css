@@ -1,6 +1,5 @@
-@import "https://www.nerdfonts.com/assets/css/webfont.css";
-@import url("https://fonts.googleapis.com/css2?family=Cherry+Cream+Soda&family=Lexend+Deca:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Rock+Salt&display=swap");
-
+@import url(https://www.nerdfonts.com/assets/css/webfont.css);
+@import url(https://fonts.googleapis.com/css2?family=Cherry+Cream+Soda&family=Lexend+Deca:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Rock+Salt&display=swap);
 /*
 Lexend Deca
 Rock Salt
@@ -309,3 +308,6 @@ footer a:hover {
     width: 50%;
   }
 }
+
+
+/*# sourceMappingURL=main.css.map*/
